@@ -1,0 +1,179 @@
+﻿body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div{margin:0;padding:0;border:0;}
+ul,ol{list-style-type:none;}
+select,input,img,select{vertical-align:middle;}
+input{ font-size:12px;}
+a{ text-decoration:none; color:#000;}
+a:hover{color:#c00; text-decoration:none;}
+html {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent; /* For some Androids */
+}
+.clear{clear:both;}
+.fl{float: left;}
+.fr{float: right;}
+.clearfix:after {content: ".";display: block;height: 0pt;clear: both;visibility: hidden;}
+.clearfix {display: inline-block;}
+.clearfix {display: block;}
+img{border: none !important;-webkit-border:none;}
+.css{-webkit-touch-callout: none};
+.tips{color: #783a3a;text-align: center;font-size: 14px;}
+input[type=button], input[type=submit], input[type=file], input[type=tel], button { cursor: pointer; -webkit-appearance: none; outline: none;border: none;}
+input::-ms-input-placeholder{text-align: center;color:#7d6161 !important;}
+input::-webkit-input-placeholder{text-align: center;color:#7d6161 !important;}
+input::input-placeholder { text-align: center ;color:#7d6161 !important;}
+input[placeholder], [placeholder], *[placeholder] { color:#7d6161 !important; }
+input:disabled{
+	color:#000 !important;
+}
+
+body{
+	font-size: 12px;background: #fcc992;width: 100%; overflow-x:hidden;font-family: 'microsoft yahei';
+	position: relative;
+	max-width: 415px;margin-left: 50%;
+	-moz-transform: translate(-50%, 0%) !important;
+	-ms-transform: translate(-50%, 0%) !important;
+	-webkit-transform: translate(-50%, 0%) !important;
+	transform: translate(-50%, 0%) !important;
+}
+/*主页*/
+.top img,.footer img,.listTop img{width: 100%;}
+.main{width: 100%;text-align: center;position: relative;background: url(../images/main_02.jpg) repeat-y;background-size: 100%;}
+.main div{width: 100%;text-align: center;}
+.main .tel input{
+	width: 36%;text-align: center;font-size: 14px;padding: 12px 27%;color: #7d6161;
+	background: url(../images/xue_01.png);border-radius: 5px;background-size: 100%;font-weight: bold;
+}
+.main .reg a{
+	display: inline-block;width: 90%;text-align: center;font-size: 15px;padding: 12px 0;color: #fff;
+	background: url(../images/xue_02.png) no-repeat;background-size: 100%;border-radius: 5px;font-weight: bold;
+}
+.main .list a{
+	display: inline-block;width: 90%;text-align: center;font-size: 14px;padding: 12px 0;color: #972930;
+	background: url(../images/xue_03.png) no-repeat;background-size: 100%;border-radius: 5px;font-weight: bold;
+}
+.suo{position: absolute;}
+.suo1{top: 30px;}
+.suo2{top: 84px;}
+.suo img{width: 8px;padding: 0 20%;}
+.reg,.list{margin-top: 8px;}
+.main .rules{color: #7b654d;font-size: 14px;text-align: left;width: 90%;padding: 20px 5% 0;line-height: 23px;}
+.main .prises{
+	color: #854909;font-size: 14px;width: 90%;padding: 5%;text-align: left;
+	background: url(../images/pri_op.png) 50% 0% no-repeat;background-size: 55px;
+}
+.main .prises table{border-top: 1px solid #854909;border-left: 1px solid #854909;text-align: center;margin-top: 5px;}
+.prises td{border-bottom: 1px solid #854909;border-right: 1px solid #854909;text-align: center;width: 30%;padding: 5px 0;}
+.rTitle,.pTitle{font-size: 15px;}
+/*排行榜*/
+.listTop{width: 100%;position: relative;padding-bottom: 13px;}
+.listTop .back{
+	position: absolute;top: 79%;left: 30%;width: 40%;height: 44px;
+	background: url(../images/backMain.png) no-repeat;background-size: 100%;
+}
+.bang{position: relative;width: 100%;}
+.bang .bTitle{color: #fff;background: #eda17f;border-radius: 15px 15px 0 0;width: 90%;padding: 10px 3% 6px 7%;}
+.bang .bTitle .record{width: 100px;}
+.bang .nums{background: #fff;color: #fcc992;}
+.bang .nums li{
+	border-bottom: 1px solid #FCC992;font-size: 15px;font-family: "黑体";font-weight: bold;padding: 8px 14%;
+	text-align: left;width: 72%;
+}
+.bang .nums .yourScore{margin: 0 50px;}
+.bang .bBttm{color: #fff;background: #eda17f;border-radius: 0 0 15px 15px;width: 90%;padding: 20px 3% 10px 7%;}
+.jLus{
+	width: 96%;height: 335px;background: url(../images/dialog.png) no-repeat;background-size: 100%;
+	margin: 0 2%;font-size: 15px;color: #fff;font-family: '黑体';font-weight: bold;padding-top: 1px;
+	position: absolute;top: 35px;z-index: 8;display: none;
+}
+.jLus .dArea{position:relative;width: 92%;height: 280px;overflow-y: scroll;margin-top: 35px;margin-left: 4%;}
+.jLus .dLog{margin-top: 5px;margin-left: 10%;}
+.jLus .dLogFirst{margin-top: 3px;}
+.jLus .dLogType1{
+	width: 80%;height: 55px;background: url(../images/dialog_01.png) no-repeat;background-size: 100%;
+	line-height: 55px;text-align: center;
+}
+.jLus .dLogType2{
+	width: 80%;height: 48px;background: url(../images/dialog_02.png) no-repeat;background-size: 100%;
+	text-align: center;padding: 15px 0;line-height: 23px;
+}
+
+@media screen and (max-width: 320px){
+	.bang .nums .yourScore{margin: 0 30px;}
+	.jLus .dLogType1{height: 43px;line-height: 43px;}
+	.jLus .dLogType2{height: 42px;padding: 11px 0;}
+	.jLus .dArea{margin-top: 28px;height: 243px;}
+	.jLus{font-size: 13px;height: 285px;}
+	.main .tel input{padding: 9px 27% 12px;margin-bottom: 3px;}
+}
+@media screen and (width: 360px){
+	.jLus .dArea{margin-top: 34px;height: 271px;}
+}
+@media screen and (min-width: 412px){
+	.jLus .dArea{margin-top: 38px;height: 310px;}
+	.listTop .gai{font-size: 15px !important;top: 71% !important;}
+	.jLus{height: 375px;}
+	.suo1{top: 34px;}
+	.suo2{top: 88px;}
+}
+@media screen and (min-width: 421px){
+	.board{width: 1000% !important;left: -500% !important;}
+}
+
+
+
+.mini_bd{
+	width: 65%;border-radius: 5px;background: #000;opacity: 0.85;color: #fff;text-align: center;padding: 15px 0;
+	position: fixed;
+	z-index:7;
+	top: 15%;left: 50%;
+	-moz-transform: translate(-50%, -50%) !important;
+	-ms-transform: translate(-50%, -50%) !important;
+	-webkit-transform: translate(-50%, -50%) !important;
+	transform: translate(-50%, -50%) !important;
+	display: none;
+}
+.board{width: 100%;height: 100%;position: fixed;top: 0;left: 0;z-index: 5;background: #000;opacity: 0.6;display: none;}
+.popUp{
+	width: 90%;height: 170px;position: fixed;z-index:9;
+	top: 50%;left: 50%;background: #ffc86d;border-radius: 5px;
+	-moz-transform: translate(-50%, -50%) !important;
+	-ms-transform: translate(-50%, -50%) !important;
+	-webkit-transform: translate(-50%, -50%) !important;
+	transform: translate(-50%, -50%) !important;
+	display: none;
+}
+.tan{position: relative;width: 100%;height: 170px;background: #ffc86d;border-radius: 5px;}
+.tan .tip_g1{text-align: center;position: absolute;top: 50px;width: 100%;height: 45px;font-size: 14px;color: #444;line-height: 24px;}
+.tan .tip_g1 span{width: 241px;display: inline-block;margin-top: -5px;}
+.tan .pbtns{position: absolute;top: 110px;text-align: center;width: 100%;z-index: 11;}
+.tan .pbtns input{background: #ff5656;padding: 13px 25px;font-size: 14px;color: #fff;border-radius: 5px;width: 100%;}
+.tan .pbtns input.reg{width: 90%;border-radius: 0px;}
+.tan .pbtns a{display: inline-block;margin:0 5px;}
+.tan .pbtns .down{
+	background: #ff5656;padding: 13px 25px;font-size: 14px;color: #fff;border-radius: 5px;width: 100%;
+	display: none;
+}
+.wei{display: none;position: absolute;top: 90%;left: 10%;width: 90%;z-index: 10;}
+.zhong{display: none;position: absolute;top: -30%;left: -3%; width: 106%;height: 175%;z-index: 10;}
+.wei img,.zhong img{width: 100%;}
+.close{
+	background:url(../images/close.png) top right no-repeat;width: 40px;height: 40px;display:inline-block;
+	background-size: 30px 30px;position: absolute;z-index: 20;right: 10px;top: 10px;
+}
+.tan .leftTop{
+	position: absolute; top: -30px;left: 0px;
+	width: 61px;height: 90px;background: url(../images/leftTop.png) no-repeat;background-size: 100% 100%;
+}
+.arrow{
+	position: fixed;z-index: 6;background: url(../images/arrow.png) no-repeat;width: 53px;height: 67px;
+	background-size: 100% 100%;right: 15px;top: 15px;display: none;
+}
+/*12.10最高分*/
+.listTop .highScore{
+	position: absolute;color: #fff;font-weight: bold;font-family: '黑体';font-size: 30px;
+	width: 100%;text-align: center;top: 50%;left: 0;
+}
+.listTop .gai{
+	position: absolute;color: #fff;font-weight: bold;font-family: "黑体";font-size: 14px;
+	width: 100%;text-align: center;top: 70%;left: 0;
+}

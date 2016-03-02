@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>慧车宝</title>
+    <link rel="icon" type="image/GIF" href="res/favicon.ico"/>
+    <meta name="viewport" content="width=321,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="full-screen" content="yes"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta name="x5-fullscreen" content="true"/>
+    <meta name="360-fullscreen" content="true"/>
+    <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body style="padding:0; margin: 0; background: #000;">
+	<canvas id="gameCanvas" width="321" height="480"></canvas>
+	<!--加载页内容-->
+	<div class="loadP">
+		<img src="assets/ld_01.jpg" class="ld1" />
+		<div class="prA">
+			<img src="assets/ld_03.jpg" class="ld3" />
+			<img src="assets/prise0.png" class="p0 prM1" />
+		</div>
+		<img src="assets/ld_04.jpg" class="ld4" />
+		<div class="loadTxt">~您的礼物在烟囱上，马上到手~</div>
+		<div class="loadBar"></div>
+		<div class="loadJin"></div>
+		<div class="jinDu">0%</div>
+	</div>
+	<!--游戏页内容-->
+	<div class="gameP">
+		<ul class="blood">
+			<li><img src="assets/heart.png" /></li>
+			<li><img src="assets/heart.png" /></li>
+			<li><img src="assets/heart.png" /></li>
+		</ul>
+		<div class="bang"><img src="assets/bang.png" /></div>
+		<div class="oh">+1000</div>
+		<div class="board"></div>
+		<div class="tip">点击或长按屏幕两侧</div>
+		<div class="hint">
+			<img src="assets/leftbutton.png"  />
+			<span class="hMiddle"></span>
+			<img src="assets/rightbutton.png"  />
+		</div>
+		<div class="hmLine"></div>
+		<div class="start"><img src="assets/start.png"  /></div>
+	</div>
+	<!--弹窗内容-->
+	<div class="popS">
+		<img src="assets/popT.png"  class="popT" />
+		<img src="assets/popBar.png"  class="popBar" />
+		<img src="assets/close.png"  class="close" />
+		<div class="last">
+			<h2>您的得分</h2>
+			<img src="assets/gift.jpg"  class="gift" />
+			<div class="result">1959</div>
+			<span class="again">再玩一次</span>
+			<span class="list">查看排名</span>
+			<span class="share">分享</span>
+			<img src="assets/down.png"  class="down" />
+		</div>
+	</div>
+	<div class="arrow"></div> 
+    <script src="src/jquery-1.11.3.min.js"></script>
+    <script>
+    	var w = document.documentElement.clientWidth || document.body.clientWidth;
+		var pw = parseInt(w);
+		$(".loadBar").css("left",(pw-280)/2-1+"px");
+		$(".loadJin").css("left",(pw-280)/2+"px");
+		var bar = 0;
+		var zzz = Math.floor(Math.random()*50);
+		var jiaZ = setInterval(function(){
+			var lw = parseInt($(".loadJin").css("width"));
+			if(bar<(200+zzz)&&lw!=280){
+				bar++;
+				$(".loadJin").css("width",bar+"px");
+				var jd = parseInt(parseInt($(".loadJin").css("width"))/280*100);
+				$(".jinDu").html(jd+"%");
+			}
+		},10);
+    </script>
+	<script>
+	window.onload = function(){
+          cc.game.onStart = function(){
+              cc.view.enableAutoFullScreen(false);  //禁止自动全屏
+			  var screenSize = cc.view.getFrameSize();
+			  cc.view.setDesignResolutionSize(320, 480, cc.ResolutionPolicy.EXACT_FIT);
+			  cc.LoaderScene.preload(gameResources, function () {
+				  cc.director.runScene(new gameScene());
+				  console.log(111);
+			  }, this);
+          };
+          cc.game.run("gameCanvas");
+      };
+    </script>
+	<script type="text/javascript" src="cc3.8-lite.min.js" charset="UTF-8"></script>
+</body>
+</html>
